@@ -6,7 +6,7 @@ export const Lights = ({ lights }) => {
     
         <div className="lights">
 
-            {lights.map((light,index) => (<Light key={index} roomName={light.name} initialState={light.state} />)
+            {lights.map((light,index) => (<Light key={index} name={light.name} state={light.state} />)
             )}
 
         </div>)

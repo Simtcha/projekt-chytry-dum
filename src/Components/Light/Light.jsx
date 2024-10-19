@@ -3,8 +3,8 @@ import './Light.css';
 import lightOn from "./light-on.svg";
 import lightOff from "./light-off.svg";
 
-export const Light = ({ roomName, initialState }) => {
-    const [lightState, setLightState] = useState(initialState);
+export const Light = ({ name, state }) => {
+    const [lightState, setLightState] = useState(state);
 
     const turnOnLight = () => {
         setLightState(lightState === 'on' ? 'off' : 'on');
@@ -16,7 +16,7 @@ export const Light = ({ roomName, initialState }) => {
                 <img src={lightState === 'off' ? lightOff : lightOn} alt="light bulb" />
             </div>
             <div className="light__name">
-                {roomName}
+                {name}
             </div>
         </div>
     );
